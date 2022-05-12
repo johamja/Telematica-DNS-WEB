@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mensaje.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <% if(tipo=="erro-reguistro" ){ %>
+        <div>
+            <h1>
+                <%= mensaje %>
+            </h1>
+            <button onclick="location.href='/register'"> volver a al formulario de inscripcion</button>
+        </div>
+        <% } else if(tipo=="reguistro-exitoso" ){ %>
+            <div>
+                <h1>Gracias por hacer parte de nuestra red social</h1>
+                <h2>Te damos la bienvenida <%= m1 %>
+                </h2>
+                <p>tu correo desde ahora para cada inicio de secion sera el siguinete <%= m2 %>
+                </p>
+                <button onclick="location.href='/Loguin'">logueate para iniciar</button>
+            </div>
+            <% } else if (tipo=="error de loguin 1" ){%>
+                <div>
+                    <h1>Erro al iniciar la secion</h1>
+                    <p>
+                        <%= m1 %>
+                    </p>
+                    <button onclick="location.href='/Loguin'"> volver a loguin </button>
+                </div>
+                <% } else if (tipo=="error de loguin 2" ){%>
+                    <div>
+                        <h1>Erro al iniciar la secion</h1>
+                        <p>
+                            <%= m1 %>
+                        </p>
+                        <button onclick="location.href='/Loguin'"> volver a loguin </button>
+                    </div>
+                    <% } else if (tipo=="error de reguistro caracteres nulos" ){%>
+                        <div>
+                            <h1>Erro al crear el usuario</h1>
+                            <p>
+                                <%= m1 %>
+                            </p>
+                            <button onclick="location.href='/register'">volver al formulario </button>
+                        </div>
+                        <% } %>
+
+</body>
+
+</html>

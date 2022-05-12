@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loguin.css">
+    <title>loguin</title>
+    <script>
+        window.onload = function () {
+            document.auth.UserName.focus();
+        }
+    </script>
+</head>
+
+<body>
+    <video src="img-loguin/PATAGONIA.mp4" autoplay muted loop></video>
+    <div class="cont1">
+        <div class="cont2">
+            <h1>Bienvenido</h1>
+            <form action="Loguin" method="POST" name="auth">
+                <h3>Ingresa tu usuario</h3>
+                <input type="email" name="correo" id="correo" placeholder="User" autofocus requerido>
+                <h3>Ingresa tu contraseña</h3>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Password" requerido>
+                <input type="submit" value="loguin" class="loguin">
+            </form>
+            <button onclick="location.href='/'">Inicio</button>
+            <p>Si no tienes una cuenta puedes crear tu cuneta en <a href="/register">Omix</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

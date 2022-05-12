@@ -2,7 +2,7 @@
 ``` bash
  ./script.sh 
 ```
-
-Eliminar todas las imágenes de docker
-    
-    docker rmi $(docker images -q)
+# Descripcion de la api-web con node.js
+# Contendio de la api
+# Ejecucion del script
+# Implementaticion del proyecto 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>reguistro</title>
+</head>
+<body>
+    <div>
+        <h1>Formulario de registro</h1>
+        <form action="/register" method="post">
+            <p>Introdusca su nombre completo</p>
+            <input type="text" name="nombre" id="nombre" placeholder="nombre">
+            <p>Fecha de nacimiento</p>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="fecha_nacimiento">
+            <p>El numero de años que tiene</p>
+            <input type="number" name="edad" id="edad" placeholder="edad">
+            <p>genero</p>
+            <select name="genero" id="genero">
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Otro">Otro</option>
+            </select>
+            <p>Ciudad en la que vive actualmente</p>
+            <input type="text" name="ciudad_actual" id="ciudad_actual" placeholder="ciudad_actual">
+            <p>Introduca su correo</p>
+            <input type="email" name="correo" id="correo" placeholder="correo">
+            <p>Ingrese una coontraseña</p>
+            <input type="password" name="contraseña" id="contraseña" placeholder="contraseña">
+            <p></p>
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+</body>
+</html>

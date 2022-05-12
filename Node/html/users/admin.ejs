@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+</head>
+<body>  
+    <table border="2">
+    <% for (var i = 0; i < lista.length; i++) { %> 
+        <tr>
+            <% for (var j = 0; j < 7; j++){ %> 
+                <td>  <p style="margin-left: 10px; margin-right: 10px"><%= lista[i][j] %></p>  </td>
+            <% } %> 
+        </tr>
+    <% } %>
+    </table> 
+</body>
+</html>

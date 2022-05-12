@@ -1,0 +1,217 @@
+:root {
+    ---color-1: #ff8d8d;
+    ---color-2: #ff8b3d;
+    ---color-3: #70F4F8;
+    ---color-4: #62D9A3;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    max-width: 100%;
+    max-height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+video {
+    z-index: 0;
+    grid-row: 1;
+    grid-column: 1;
+
+}
+
+.cont1 {
+    z-index: 2;
+    grid-row: 1;
+    grid-column: 1;
+    background-color: rgba(0, 0, 0, 0.466);
+}
+
+.cont2 {
+    box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.178);
+}
+p,
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(var(---color-2), var(---color-1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+p{
+    color: rgb(255, 255, 255);
+}
+a{
+    color: var(---color-1);
+}
+h3 {
+    background: linear-gradient(var(---color-3), var(---color-4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    color: rgb(255, 255, 255);
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(---color-4);
+    backdrop-filter: blur(30px);
+}
+
+input:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: none;
+    border-bottom: 2px solid var(---color-3);
+}
+
+input:focus-visible {
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: white;
+    text-align: center;
+}
+
+button {
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: var(---color-4);
+    box-shadow: 3px 3px 3px var(---color-3);
+    width: min-content;
+}
+
+.loguin{
+    background-color: #24b300;
+}
+
+@media screen and (max-width: 640px) {
+    .cont1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .cont2 {
+        display: flex;
+        height: max-content;
+        width: min-content;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px 20px 10px 20px;
+        background-color: rgba(255, 255, 255, 0.192);
+        backdrop-filter: blur(50px);
+    }
+
+    video {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+    }
+
+    input {
+        margin: 5px;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+    .cont1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .cont2 {
+        display: flex;
+        height: max-content;
+        width: min-content;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px 40px 20px 40px;
+        background-color: rgba(255, 255, 255, 0.192);
+        backdrop-filter: blur(20px);
+    }
+
+    input {
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    video {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .cont1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .cont2 {
+        display: flex;
+        height: max-content;
+        width: min-content;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+        padding: 40px 80px 40px 80px;
+        background-color: rgba(255, 255, 255, 0.192);
+        backdrop-filter: blur(20px);
+    }
+
+    input {
+        margin: 5px;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    video {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+    }
+}
