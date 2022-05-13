@@ -88,13 +88,13 @@ app.post('/register', (request, response) => {
                 })
             } else {
                 lista_usuarios.push([
-                    request.body.nombre,
-                    request.body.fecha_nacimiento,
-                    request.body.edad,
-                    request.body.ciudad_actual,
-                    request.body.correo,
-                    request.body.contraseña,
-                    request.body.genero,
+                    request.body.nombre, //0
+                    request.body.fecha_nacimiento, //1
+                    request.body.edad, //2
+                    request.body.ciudad_actual, //3
+                    request.body.correo, //4
+                    request.body.contraseña, //5
+                    request.body.genero, //6 
                 ])
                 response.render(__dirname + '/html/users/mensaje.ejs', {
                     tipo: "reguistro-exitoso",
@@ -106,6 +106,23 @@ app.post('/register', (request, response) => {
     });
 })
 
+app.post('/admin-delete', (request,response) => {
+    if (request.body.correo == "") {
+        response.render(__dirname + '/html/users/mensaje.ejs', {
+            tipo:"",
+            m1: "Error al eliminar usuaro",
+            m2: "El correo que proporciono no se encuentra en la lista"
+        })
+    } else {
+        for (i = 0; i < lista_usuarios.length; i++) {
+            if (lista_usuarios[i][4] == request.body.correo){
+                lista_usuarios.splice(i)
+                response.render(__dirname + '/html/users/admin.ejs', { lista: lista_usuarios })
+                break
+            }
+        }
+    }
+})
 
 app.get('/admin', (request, response) => {
     response.render(__dirname + '/html/users/admin.ejs', { lista: lista_usuarios })

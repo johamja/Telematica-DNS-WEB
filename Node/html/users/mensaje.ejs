@@ -51,7 +51,12 @@
                             </p>
                             <button onclick="location.href='/register'">volver al formulario </button>
                         </div>
-                        <% } %>
+                        <% } else { %>
+                            <div>
+                                <h1><%= m1 %> </h1>
+                                <p><%= m2 %> </p>
+                            </div>                            
+                            <% } %> 
 
 </body>
 

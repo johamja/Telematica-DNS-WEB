@@ -17,15 +17,5 @@ COPY Node /root/node-web
 # añadiendo el comando de ejecucion en el .bashrc
 RUN echo "cd /root/node-web/ && npm start" >> /root/.bashrc
 
-# instalando apache2
-# RUN apt install -y apache2
-# eliminando archivos
-# RUN rm /var/www/html/index.html
-# copiando los archivos de la paguina web server
-# COPY html /var/www/html
-# copiando el nuebo bash de la maquina ubuntu-web-server
-# COPY ".bashrc" /root/.bashrc
-# cambiando los paramaetros de seguridad de el archivo .bashrc
-# RUN chmod 644 /root/.bashrc
-# abriendo puertos del contenedor
+# abriendo puertos para las imagen
 EXPOSE 3000 
