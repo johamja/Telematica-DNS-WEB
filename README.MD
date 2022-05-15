@@ -58,7 +58,7 @@ Para la ejecución del proyecto se tiene que dar inicio al archivo `scrpit.sh` c
 ## Requerimientos del proyecto
 Para la ejecución del proyecto se requiere de un entorno `Linux` en el que tenga instalado las siguientes aplicaciones
 ```
-sudo apt install git & sudo apt install Docker
+sudo apt install git && sudo apt install Docker
 ```
 Con ello nos aseguramos de que se despliegue correctamente el proyecto, primero realizando la clonación del proyecto y después dar lugar al despliegue de una imagen del archivo `Dockerfile` que con la ejecución del `scrpit.sh` realizara el despliegue de un contenedor abierto en la ruta [localhost](http://localhost) 
 ## Desplegando el proyecto manualmente
